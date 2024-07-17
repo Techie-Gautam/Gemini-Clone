@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body::-webkit-scrollbar {
+  background-color: #131314;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(182, 176, 176);
+  border-radius: 50px;
+  width: 20px;
+  height: 50px;
+}
+#root{
+  animation: fade-in 1.5s;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+a {
+  color: rgb(15, 131, 247);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(219, 41, 219);
+  text-decoration: underline;
+}
+
+
+.greet{
+  background: linear-gradient(80deg, #4b90ff, #D56676);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.loader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.loader hr {
+  border-radius: 4px;
+  border: none;
+  background-color: transparent;
+  background: linear-gradient(to right, #4a24d1, #524c4c, #4a24d1);
+  background-size: 800px 50px;
+  height: 20px;
+  animation:  loader 3s infinite linear, loader-width 1s ease-in-out forwards;
+}
+
+.loader hr:nth-child(1) {
+  width: 0px;
+  animation: loader-width 0.5s ease-in-out 0.2s forwards, loader 3s infinite linear;
+}
+.loader hr:nth-child(2) {
+  width: 0px;
+  animation: loader-width 0.5s ease-in-out 0.3s forwards, loader 3s infinite linear;
+}
+.loader hr:nth-child(3) {
+  width: 0px;
+  max-width: 400px;
+  animation: loader-width 0.5s ease-in-out 0.4s forwards, loader 3s infinite linear;
+}
+
+@keyframes loader {
+  0%{
+    background-position: -800px 0px;
+  }
+  100%{
+    background-position: 800px 0px;
+  }
+}
+
+@keyframes loader-width {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
