@@ -107,7 +107,7 @@ const ContextProvider = (props) => {
 
   const handleDelete = (id) => {
     const filterItems = prevPrompts.filter((item, index) => index !== id)
-     setPrevPrompts(filterItems)
+    setPrevPrompts(filterItems)
   }
 
   const contextValue = {
